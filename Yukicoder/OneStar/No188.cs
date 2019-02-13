@@ -9,8 +9,6 @@ public class No188
     {
         int day = 0;
 
-
-        //string[] input = Console.ReadLine().Split(' ');
         while (month < 12)
         {
             day = DecideDay(month);
@@ -23,7 +21,7 @@ public class No188
     public static int DecideDay(int month)
     {
         int day = 0;
-
+        
         switch (month)
         {
             case 1:
