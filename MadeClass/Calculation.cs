@@ -12,7 +12,7 @@ class Calculation
         list.Add(13);
         list.Add(2);
         list.Add(5);
-        Console.WriteLine(MultipleLcm(list));
+        Console.WriteLine(Lcm(list));
     }
 
     /// <summary>
@@ -47,17 +47,15 @@ class Calculation
             b = r;
             r = a % b;
         }
-
         return b;
     }
 
     /// <summary>
     /// 複数の数の最小公倍数を求める
     /// Gcdメソッドに依存
-    /// (MultipleGcdメソッドには依存していないので注意)
     /// </summary>
     /// <returns>最小公倍数</returns>
-    public static int MultipleLcm(List<int> list)
+    public static int Lcm(List<int> list)
     {
         var a = 0;
         var b = 0;
@@ -94,7 +92,7 @@ class Calculation
     /// 複数の数の最大公約数を求める
     /// </summary>
     /// <returns>最大公約数</returns>
-    public static int MultipleGcd(List<int> list)
+    public static int Gcd(List<int> list)
     {
         var a = 0;
         var b = 0;
