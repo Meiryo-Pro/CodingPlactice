@@ -2,8 +2,8 @@ This repository is used for my practice.
 
 # Directory description
 **Yukicoder**
-Yukicoderで解いた問題のコードが入ってます
-https://yukicoder.me/
+[Yukicoder](https://yukicoder.me/)で解いた問題のコードが入ってます
+
 
 **MadeClass**
 自作クラスが入ってます
