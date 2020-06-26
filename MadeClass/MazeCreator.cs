@@ -2,15 +2,24 @@
 using UnityEngine;
 using UnityEngine.Assertions;
 
+/**
+*このプログラムは下記書籍を参考にしています。
+*
+*牙竜 (2018)　No5 3D迷路
+*吉谷 幹人・布留川 英一・一條 貴彰・西森 丈俊・藤岡 裕吾・室星 亮太・車谷 勇人・湊 新平
+*・土屋 つかさ・黒河 優介・中村 優一・牙竜・コポコポ・かせ・hataken・monmoko 
+*Unityゲーム プログラミング・バイブル 株式会社ボーンデジタル pp123-125.
+**/
+
 public class MazeCreator : MonoBehaviour
 {
-    [SerializeField,Tooltip("壁となるprefabを設定すること")]
+    [SerializeField, Tooltip("壁となるprefabを設定すること")]
     private GameObject wall;
 
-    [SerializeField,Tooltip("床となるprefabを設定すること")]
+    [SerializeField, Tooltip("床となるprefabを設定すること")]
     private GameObject floor;
 
-    [SerializeField,Tooltip("天井となるprefabを設定すること")]
+    [SerializeField, Tooltip("天井となるprefabを設定すること")]
     private GameObject ceiling;
 
     private const int FailVal = -1; //エラーを返したり、絶対に被らない初期値を設定したい時に使う
@@ -69,7 +78,7 @@ public class MazeCreator : MonoBehaviour
         //初期地決め
         CurrentX = Random.Range(0, (mazeSideSize + 1) / 2) * 2;
         CurrentY = Random.Range(0, (mazeSideSize + 1) / 2) * 2;
-        
+
         Maze[CurrentX + 1, CurrentY + 1] = 1;　//壁 = 0 通路 = 1
         DigWall(CurrentX + 1, CurrentY + 1);
         CreateMazeObject();
@@ -203,7 +212,7 @@ public class MazeCreator : MonoBehaviour
             {
                 if (Maze[x, y] == 0)
                 {
-                    ExecInstantiate(wall,x,y);
+                    ExecInstantiate(wall, x, y);
                 }
                 else
                 {
