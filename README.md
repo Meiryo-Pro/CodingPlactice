@@ -12,3 +12,6 @@ This repository is used for my practice.
 
 **LINQStudySet**
 LINQを学習するのに使ったものが入ってます  
+
+**MathPuzzle**
+「プログラマ脳を鍛える数学パズル」をC#で解いたものが入ってます
